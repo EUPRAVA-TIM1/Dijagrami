@@ -1,0 +1,96 @@
+Uslovi koriscenja sistema za sud:
+
+PREGLED ZAPOSLENIH SUDIJA:
+1.Preduslovi:
+- Korisnik je prijavljen na sistem (bilo koja rola)
+2.Tok izvrsavanja:
+TOK1:
+- Korisnik bira opciju za pregled sudija
+- Korisniku se prikazuju zaposlene sudije sortirani po prezimenu i imenu
+TOK2:
+- Korisnik bira opciju za pregled sudova
+- Nakon prikazivanja sudova, korisnik bira sud od interesa
+- Korisnik bira opciju za pregled zaposlenih sudija u izabranom sudu
+- Korisniku se prikazuju zaposlene sudije sortirani po prezimenu i imenu
+3.Posledice:
+-Korisnik ima uvid u osnovne informacije o sudijama (Ime, prezime, opstina, broj slucajeva)
+4.Izuzeci:
+X
+
+PRETRAGA SUDSKIH PREDMETA
+1.Preduslovi:
+- Korisnik je prijavljen na sistem
+- Postojanje sudskih predmeta
+2.Tok izvrsavanja:
+TOK1 - Pregled od strane gradjana:
+- Korisnik bira opciju za pregled predmeta koji se odnose na njega
+- Korisniku se prikazuju sudski predmeti sortirani po datumu
+TOK2 - Pregled od strane sudija:
+- Sudija bira opciju za pregled predmeta koji su mu dodeljeni
+- Sudiji se prikazuju sudski predmeti sortirani po datumu
+3.Posledice:
+- 1.1 Korisnik ima uvid u osnovne informacije sudskih predmeta koji se odnose na njega (datum, naslov predmeta, ime i prezime sudije kome je dodeljen predmet, stanje predmeta)
+- 1.2 Sudija ima uvid u sve informacije sudskih predmeta koji su mu dodeljeni
+4.Izuzeci:
+X
+
+KREIRANJE SUDSKIH PREDMETA
+1.Preduslovi:
+- Nalog za kreiranje predmeta je poslat od strane MUP-a/SUP-a
+- U sistemu postoji bar 1 zaposleni sudija
+2.Tok izvrsavanja:
+- Nakon prihvatanja zahteva za kreiranje predmeta, isti se dodeljuje sudiji cija je opstina najbliza opstini iz naloga
+3.Posledice:
+- Sudski predmet je kreiran i dodeljen nekom od sudija
+4.Izuzeci:
+- U sistemu ne postoji ni jedan zaposleni sudija
+
+KREIRANJE ROCISTA:
+1.Preduslovi:
+- Sudija je prijavljen na sistem
+- Datum rocista mora biti najavljen minimalno 7 dana unapred
+2.Tok izvrsavanja:
+- Sudija bira opciju za pregled sudskih predmeta koji su mu dodeljeni
+- Nakon prikaza dodeljenih predmeta, sudija bira predmet od interesa
+- Sudija bira opciju za kreiranje rocista za dati predmet
+3.Posledice:
+- Zainteresovanim stranama ukljucenim u predmet se salje obavestenje o zakazanom rocistu
+4.Izuzeci:
+- X
+
+IZRICANJE PRESUDE:
+1.Preduslovi:
+- Sudija je prijavljen na sistem
+- Predmet je aktivan ili na cekanju
+2.Tok izvrsavanja:
+TOK 1 (bez rocista):
+- Sudija bira opciju za pregled sudskih predmeta koji su mu dodeljeni
+- Nakon odabira predmeta od interesa sudija bira opciju za izricanje presude
+- Sudija unosi neophodne informacije za presudu i resenje se automatski salje zainteresovanim stranama
+TOK 2 (rociste)
+- Sudija bira opciju za pregled svojih rocista
+- Nakon odabira rocista od interesa sudija bira opciju za izricanje presude
+- Sudija unosi neophodne informacije za presudu i resenje se automatski salje zainteresovanim stranama
+3.Posledice:
+- Predmet postaje odbijen ili prihvacen
+- Sve zainteresovane strane su obavestene o izrecenoj presudi
+4.Izuzeci:
+X
+
+SLANJE ZAHTEVA ZA DODATNOM DOKUMENTACIJOM:
+1.Preduslovi:
+- Sudija je prijavljen na sistem
+- Sudija ima bar 1 dodeljen predmet
+2.Tok izvrsavanja:
+- Sudija bira opciju za pregled sudskih predmeta koji su mu dodeljeni
+- Nakon prikaza informacija o dodeljenom predmetu, sudija salje zahtev za dodatnom dokumentacijom MUP-u/SUP-u
+3.Posledice:
+- Predmet prelazi u fazu cekanja dodatne dokumentacije
+- Zahtev za dodatnom dokumentacijom je poslat MUP-u/SUP-u
+4.Izuzeci:
+X
+
+
+
+
+
