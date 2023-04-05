@@ -1,67 +1,141 @@
 Uslovi koriscenja sistema za sud:
 
-PREGLED ZAPOSLENIH SUDIJA:
+PRETRAGA ZAPOSLENIH SUDIJA:
 1.Preduslovi:
-- Korisnik je prijavljen na sistem (bilo koja rola)
+- Korisnik je prijavljen na sistem 
 2.Tok izvrsavanja:
 TOK1:
 - Korisnik bira opciju za pregled sudija
-- Korisniku se prikazuju zaposlene sudije sortirani po prezimenu i imenu
+- Sitem prikazuje korisniku zaposlene sudije sortirani po prezimenu i imenu (mogucnost filtriranja i pretrazivanja)
 TOK2:
 - Korisnik bira opciju za pregled sudova
-- Nakon prikazivanja sudova, korisnik bira sud od interesa
+- Sistem prikazuje korisniku sudove sortirane po opstinama
+- Korisnik bira sud od interesa
+- Sistem prikazuje korisniku osnovne informacije o izabranom sudu
 - Korisnik bira opciju za pregled zaposlenih sudija u izabranom sudu
-- Korisniku se prikazuju zaposlene sudije sortirani po prezimenu i imenu
+- Korisniku se prikazuju sudije sortirane po prezimenu i imenu
 3.Posledice:
 -Korisnik ima uvid u osnovne informacije o sudijama (Ime, prezime, opstina, broj slucajeva)
 4.Izuzeci:
-X
+- Sud nema prijavljenog ni jednog zaposlenog sudiju
 
-PRETRAGA SUDSKIH PREDMETA
+PREGLED ANALITIKE SUDSKIH ODLUKA
 1.Preduslovi:
 - Korisnik je prijavljen na sistem
-- Postojanje sudskih predmeta
 2.Tok izvrsavanja:
-TOK1 - Pregled od strane gradjana:
-- Korisnik bira opciju za pregled predmeta koji se odnose na njega
-- Korisniku se prikazuju sudski predmeti sortirani po datumu
-TOK2 - Pregled od strane sudija:
-- Sudija bira opciju za pregled predmeta koji su mu dodeljeni
-- Sudiji se prikazuju sudski predmeti sortirani po datumu
+- Korisnik bira opciju za pregled sudija
+- Korisnik bira sudiju od interesa
+- Korisniku se prikazuju osnovne informacije o izabranom sudiji
+- Korisnik bira opciju za pregled istorije sudskih presuda odabranog sudije
+- Korisniku se prikazuju osnovne informacije o istoriji presuda za odredjene prekrsajne prijave (prekrsaj, doneta odluka, kazna)
 3.Posledice:
-- 1.1 Korisnik ima uvid u osnovne informacije sudskih predmeta koji se odnose na njega (datum, naslov predmeta, ime i prezime sudije kome je dodeljen predmet, stanje predmeta)
-- 1.2 Sudija ima uvid u sve informacije sudskih predmeta koji su mu dodeljeni
+- Korisnik ima uvid u istoriju osnovne informacije donetih presuda od strane izabranog sudije
+4.Izuzeci:
+X
+
+PREGLED SUDSKIH ODLUKA (za prijavljenog korisnika)
+1.Preduslovi:
+- Korisnik je prijavljen na sistem
+- Korisnik ima resenje za minimum 1 sudski predmet
+2.Tok izvrsavanja:
+- Korisnik bira opciju za pregled resenja koje se odnose na njega
+- Korisniku se prikazuju sudske odluke sortirane po datumu
+3.Posledice:
+- Korisnik ima uvid u sudske odluke koje su kreirane za predmete koji se odnose na njega
+4.Izuzeci:
+X
+
+PREGLED ZAKAZANIH ROCISTA OD STRANE GRADJANA:
+1.Preduslovi:
+- Korisnik je prijavljen na sistem kao gradjanin
+- Korisnik ima minimalno jedno zakazano rociste
+2.Tok izvrsavanja:
+- Korisnik bira opciju za pregled rocista
+- Sistem prikazuje korisniku listu rocista koja se odnose na njega sortiranih po datumu i vremenu
+3.Posledice:
+- Korisnik ima uvid u rocista za prekrsaje koji su podneti protiv njega
+- Korisnik ima uvid u rocista na kojima svedoci
+- Korisnik ima uvid u rocista na kojima je advokat
+4.Izuzeci:
+X
+
+PREGLED ZAKAZANIH ROCISTA OD STRANE SUDIJA
+1.Preduslovi:
+- Korisnik je prijavljen na sistem kao sudija
+- Korisnik ima minimalno jedno zakazano rociste
+2.Tok izvrsavanja:
+- Korisnik bira opciju za pregled svojih rocista
+- Sistem prikazuje korisniku listu rocista sortiranih po datumu i vremenu
+3.Posledice:
+Sudija ima uvid u listu svojih rocista
+4.Izuzeci:
+X
+
+PREGLED PREKRSAJNIH PRIJAVA:
+1.Preduslovi:
+- Korisnik je prijavljen na sistem kao sudija
+- Sudija ima minimalno jednu dodeljenu prekrsajnu prijavu
+2.Tok izvrsavanja:
+- Korisnik bira opciju za pregled prekrsajnih prijava
+- Sistem prikazuje korisniku listu prekrsajnih prijava koje su mu dodeljene sortirane po datumu i vremenu
+- Korisnik bira prekrsajnu prijavu od interesa
+- Sistem prikazuje osnovne infomracije o prekrsajnoj prijavi
+3.Posledice:
+- Sudija ima uvid u informacije prekrsajnih prijava koja su mu dodeljena
 4.Izuzeci:
 X
 
 KREIRANJE SUDSKIH PREDMETA
 1.Preduslovi:
-- Nalog za kreiranje predmeta je poslat od strane MUP-a/SUP-a
-- U sistemu postoji bar 1 zaposleni sudija
+- Korisnik je prijavljen na sistem kao sudija
+- Nalog za prekrsajnu prijavu je poslat od strane MUP-a/SUP-a
+- Nalog za prekrsajnu prijavu je dodeljen sudiji koji vrsi kreiranje sudskog predmeta
 2.Tok izvrsavanja:
-- Nakon prihvatanja zahteva za kreiranje predmeta, isti se dodeljuje sudiji cija je opstina najbliza opstini iz naloga
+- Korisnik bira opciju za pregled prekrsajnih prijava
+- Sistem prikazuje korisniku listu prekrsajnih prijava koje su mu dodeljene sortirane po datumu
+- Korisnik bira prekrsajnu prijavu od interesa
+- Sistem prikazuje infomracije o prekrsajnoj prijavi
+- Korisnik bira opciju za kreiranje sudskog predmeta za izabranu prekrsajnu prijavu i popunjava sve neophodne podatke
 3.Posledice:
-- Sudski predmet je kreiran i dodeljen nekom od sudija
+- Prekrsajna prijava dobija status "Aktivan"
 4.Izuzeci:
-- U sistemu ne postoji ni jedan zaposleni sudija
+X
 
-KREIRANJE ROCISTA:
+PREGLED SUDSKIH PREDMETA
+1.Preduslovi:
+- Korisnik je prijavljen na sistem kao sudija
+- Kreiran je minimalno jedan sudski predmet od strane prijavljenog sudije
+2.Tok izvrsavanja:
+- Korisnik bira opciju za pregled sudskih predmeta
+- Sistem prikazuje korisniku listu sudskih predmeta koje je kreirao
+- Korisnik bira prekrsajni predmet od interesa
+- Sistem prikazuje osnovne infomracije o sudskom predmetu
+3.Posledice:
+Prijavljeni korisnik ima uvid u informacije o sudskim predmetima koje je kreirao
+4.Izuzeci:
+X
+
+ZAKAZIVANJE ROCISTA
+1.Preduslovi:
+- Korisnik je prijavljen na sistem kao sudija
+- Kreiran je minimalno jedan sudski predmet od strane prijavljenog sudije
+- Sudski predmet je u statusu "OTVOREN"
+- Korisnik se nalazi u opciji za pregled sudskih predmeta
+2.Tok izvrsavanja:
+- Korisnik bira prekrsajni predmet od interesa
+- Sistem prikazuje osnovne infomracije o sudskom predmetu
+- Korisnik bira opciju za kreiranje rocista za izabrani sudski predmet
+- Sistem prikazuje korisniku formu za zakazivanje rociscta
+- Korisnik popunjava formu za zakazivanje rocista
+3.Posledice:
+- Zainteresovanim stranama ukljucenim u predmet (optuzeni, advokat i svedoci) su obavesteni o terminu za rociste
+4.Izuzeci:
+X
+
+KREIRANJE SUDSKE ODLUKE:
 1.Preduslovi:
 - Sudija je prijavljen na sistem
-- Datum rocista mora biti najavljen minimalno 7 dana unapred
-2.Tok izvrsavanja:
-- Sudija bira opciju za pregled sudskih predmeta koji su mu dodeljeni
-- Nakon prikaza dodeljenih predmeta, sudija bira predmet od interesa
-- Sudija bira opciju za kreiranje rocista za dati predmet
-3.Posledice:
-- Zainteresovanim stranama ukljucenim u predmet se salje obavestenje o zakazanom rocistu
-4.Izuzeci:
-- X
-
-IZRICANJE PRESUDE:
-1.Preduslovi:
-- Sudija je prijavljen na sistem
-- Predmet je aktivan ili na cekanju
+- Predmet ima status "OTVOREN"
 2.Tok izvrsavanja:
 TOK 1 (bez rocista):
 - Sudija bira opciju za pregled sudskih predmeta koji su mu dodeljeni
@@ -72,25 +146,9 @@ TOK 2 (rociste)
 - Nakon odabira rocista od interesa sudija bira opciju za izricanje presude
 - Sudija unosi neophodne informacije za presudu i resenje se automatski salje zainteresovanim stranama
 3.Posledice:
-- Predmet postaje odbijen ili prihvacen
+- Predmet menja status u "ZATVOREN"
 - Sve zainteresovane strane su obavestene o izrecenoj presudi
+- Prekrsajna prijava menja status u "PRIHVACEN"/"ODBIJEN"
 4.Izuzeci:
 X
-
-SLANJE ZAHTEVA ZA DODATNOM DOKUMENTACIJOM:
-1.Preduslovi:
-- Sudija je prijavljen na sistem
-- Sudija ima bar 1 dodeljen predmet
-2.Tok izvrsavanja:
-- Sudija bira opciju za pregled sudskih predmeta koji su mu dodeljeni
-- Nakon prikaza informacija o dodeljenom predmetu, sudija salje zahtev za dodatnom dokumentacijom MUP-u/SUP-u
-3.Posledice:
-- Predmet prelazi u fazu cekanja dodatne dokumentacije
-- Zahtev za dodatnom dokumentacijom je poslat MUP-u/SUP-u
-4.Izuzeci:
-X
-
-
-
-
 
